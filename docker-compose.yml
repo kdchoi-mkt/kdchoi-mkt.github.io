@@ -1,0 +1,17 @@
+version: "3.0"
+
+services:
+  dev:
+    image: blog
+    command:
+      [
+        "jekyll",
+        "serve",
+        "--incremental",
+        "--livereload",
+        "--trace"
+      ]
+    ports:
+      - "4000:4000"
+    volumes:
+      - $PWD:/srv/jekyll
