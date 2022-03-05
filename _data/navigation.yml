@@ -1,12 +1,67 @@
 # main links
 main:
-  # - title: "Quick-Start Guide"
-  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  - title: "Sample Posts"
-    url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Biography"
+    url: /biography
+  - title: "데이터 분석"
+    url: /categories/data-analysis/
+
+data:
+  - title: "General Data Analysis"
+    url: /categories/data-analysis/
+    children:
+      - title: "1. Introduction"
+        url: /data-analysis/data-analysis-intro
+      - title: "2. 선형 대수"
+        url: /not-constructed
+      - title: "3. PCA의 의미와 증명"
+        url: /not-constructed
+      - title: "4. OLS의 수학적 의미"
+        url: /not-constructed
+      - title: "5. Interaction과 Moderation"
+        url: /not-constructed
+      - title: "6. Dependence와 Correlation의 차이"
+        url: /not-constructed
+      - title: "7. Lasso와 Ridge의 의미"
+        url: /not-constructed
+      - title: "8. Logistic Regression과 Utility"
+        url: /not-constructed
+      - title: "9. 분류 모델의 평가 지표 이해하기"
+        url: /not-constructed
+
+  - title: "Econometric"
+    url: /categories/basic-econometric
+    children:
+      - title: "1. Instrumental Variable"
+        url: /not-constructed
+      - title: "2. LATE Theorem"
+        url: /not-constructed
+      - title: "3. Mixed Logit and Hierarchical Bayesian"
+        url: /not-constructed
+      - title: "4. Regression Discontinuity"
+        url: /not-constructed
+      - title: "5. Panel Regression"
+        url: /not-constructed
+
+  # - title: "Mathematical Statsitic"
+  #   url: /categories/mathematical-stat
+  #   children:
+  #     - title: "1. Poisson Regression"
+  #       url:
+  #     - title: "2. Quantile Regression"
+  #       url:
+  #     - title: "3. Bayes Rule과 Bayesian"
+  #       url:
+  #     - title: "4. Law of Large Number와 Frequentist"
+  #       url:
+  #     - title: "5. Markov Property - 어제 일만 기억하자"
+  #       url:
+  #     - title: "6. MCMC 이해하기"
+  #       url:
+
+  # - title: "Empirical Alanysis"
+  #   url: /categories/empirical-analysis
+  #   children:
+  #     - title: "1. 아하모먼트 과학적으로 찾기"
+  #       url:
+  #     - title: "2. 유입채널 별 상품 포지셔닝하기"
+  #       url:

@@ -12,17 +12,17 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 port: 4000
 host: "0.0.0.0"
 locale: "en-US"
-title: "Marketing Science and Statistics"
+title: "경돈학생의 생각공간"
 title_separator: "-"
-subtitle: # site tagline that appears below site title in masthead
+subtitle: "마케팅 과학과 통계" # site tagline that appears below site title in masthead
 name: "Kyungdon Choi"
-description: "An amazing website."
+description: "기본적인 통계와 마케팅 과학에 대한 내용을 다룹니다. 가끔씩 수학 관련 내용이나 채-신 논문을 다루기도 합니다"
 url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -30,7 +30,7 @@ teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
-words_per_minute: 200
+words_per_minute: 100
 comments:
   provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
@@ -86,7 +86,7 @@ facebook:
   username:
   app_id:
   publisher:
-og_image: # Open Graph/Twitter default site image
+og_image: # Open Gra햣/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -104,51 +104,24 @@ analytics:
 # Site Author
 author:
   name: "Kyungdon Choi"
-  avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "Ph.D Candidate in Marketing Science, KAIST."
-  location: "Somewhere"
+  avatar: assets/images/natural_profile_cut.JPG # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio: "현재 마케팅 사이언스 박사과정 공부를 진행중에 있습니다. 소비자의 구매를 위한 기업의 다양한 의사결정과, 소비자 자체의 구매까지 이어지는 행동간 의사결정에 관심이 있습니다."
+  location: "Seoul, Hoegi"
   email:
   links:
-    - label: "Email"
+    - label: "이메일 보내기"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
+      url: "mailto:kdchoi.mkt@gmail.com"
+    - label: "깃허브 보기"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/kdchoi-mkt"
 
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://github.com/kdchoi-mkt"
 
 # Reading Files
 include:
