@@ -11,10 +11,10 @@ data:
     children:
       - title: "1. Introduction"
         url: /data-analysis/data-analysis-intro
-      - title: "2. 선형 대수"
-        url: /not-constructed
-      - title: "3. PCA의 의미와 증명"
-        url: /not-constructed
+      - title: "2. 행렬은 선형대수일까"
+        url: /data-analysis/linear-algebra
+      - title: "3. PCA는 왜 분산이 큰 방향으로 축을 잡을까"
+        url: /data-analysis/pca
       - title: "4. OLS의 수학적 의미"
         url: /not-constructed
       - title: "5. Interaction과 Moderation"
