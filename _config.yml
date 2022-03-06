@@ -25,7 +25,7 @@ name: "Kyungdon Choi"
 description: "기본적인 통계와 마케팅 과학에 대한 내용을 다룹니다. 가끔씩 수학 관련 내용이나 채-신 논문을 다루기도 합니다"
 url: "https://kdchoi-mkt.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
-repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository: "kdchoi-mkt/kdchoi-mkt.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
