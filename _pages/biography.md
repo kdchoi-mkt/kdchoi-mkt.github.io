@@ -39,6 +39,8 @@ toc: true
 
 더욱 자세한 이력 및 약력은 하단의 링크를 통해 CV를 다운받을 수 있습니다.
 
+[CV 다운받기](/assets/papers/kdchoi_cv_220307.pdf){: .btn .btn--success}
+
 # 기술
 
 - `Math`: Algebra, Number Theory, Topology, Linear Algebra, Econometric, Statistic
