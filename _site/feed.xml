@@ -1,4 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-03-07T05:40:22+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">경돈학생의 생각공간</title><subtitle>기본적인 통계와 마케팅 과학에 대한 내용을 다룹니다. 가끔씩 수학 관련 내용이나 채-신 논문을 다루기도 합니다</subtitle><author><name>Kyungdon Choi</name></author><entry><title type="html">Data Science Introduction</title><link href="http://0.0.0.0:4000/data-analysis/data-analysis-intro/" rel="alternate" type="text/html" title="Data Science Introduction" /><published>2022-03-04T00:00:00+00:00</published><updated>2022-03-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/data-analysis/data-analysis-intro</id><content type="html" xml:base="http://0.0.0.0:4000/data-analysis/data-analysis-intro/"><![CDATA[<h1 id="들어가기-앞서">들어가기 앞서…</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-03-11T08:40:29+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">경돈학생의 생각공간</title><subtitle>기본적인 통계와 마케팅 과학에 대한 내용을 다룹니다. 가끔씩 수학 관련 내용이나 채-신 논문을 다루기도 합니다</subtitle><author><name>Kyungdon Choi</name></author><entry><title type="html">행렬은 선형대수일까?</title><link href="http://0.0.0.0:4000/data-analysis/linear-algebra/" rel="alternate" type="text/html" title="행렬은 선형대수일까?" /><published>2022-03-11T00:00:00+00:00</published><updated>2022-03-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/data-analysis/linear-algebra</id><content type="html" xml:base="http://0.0.0.0:4000/data-analysis/linear-algebra/"><![CDATA[<h1 id="들어가기-앞서">들어가기 앞서…</h1>
+
+<p>데이터 사이언스 영역을 포함하여, 많은 학문에서 <code class="language-plaintext highlighter-rouge">선형 대수를 잘한다 = 행렬 계산을 잘한다</code>라고 인지하고 있습니다. 선형 대수는 무엇이고, 행렬은 무엇일까요? 서로가 어떤 관계가 있길래 사람들은 두개를 묶어서 이야기할까요? 이번 포스팅에서는 기초적인 선형 대수에 대한 내용과 행렬에 대해서 간단하게 설명하며, 특히 <code class="language-plaintext highlighter-rouge">선형대수학에 대한 지식</code>이 있으면 이해하기 쉽습니다.</p>
+
+<h1 id="linear-map">Linear map</h1>
+
+<p>우선, 행렬과 벡터를 곱하는 것부터 생각을 해봅시다. 저희는 보통 행렬끼리도 곱셈을 하지만, 행렬과 벡터를 곱하기도 하죠. 다음과 같이 말이에요!</p>
+
+\[Ax\text{ for }A\in \mathbb{R}^{n\times m}, x \in \mathbb{R}^m\]
+
+<p>그러면 이 곱셈이 과연 어떤 것들을 의미를 할까요? 우선 간단하게 표현하기 위해 $A$를 다음과 같이 표시해봅시다.</p>
+
+\[A = (a_{ij})\]
+
+<p>그러면, 이제 $x$를 비교적 쉬운 벡터인 $e_i$로 두고 $Ax$를 계산해봅시다. 이는</p>
+
+\[Ax=(a_{jk})\cdot e_i=(a_{ji})\]
+
+<p>가 되겠네요. 그런데, 여기서 중요한 점은 행렬곱에 있어서 분배법칙 (distribution law)가 성립한다는 점이고, 임의의 벡터 $x$는 $e_i$의 선형합으로 나타낼 수 있다는 점이죠. 그렇다면, 조금 더 어렵게 해서, x를 다음과 같이 정의해봅시다.</p>
+
+\[x = c_1e_1+\cdots+c_me_m\]
+
+<p>그렇다면 $Ax$는 다음과 같이 써질 수 있습니다.</p>
+
+\[\begin{align*}
+Ax &amp;= A(c_1e_1+\cdots+c_me_m) \\
+    &amp;= c_1Ae_1+\cdots c_nAe_n \\
+    &amp;= c_1(a_{j1}) + \cdots c_n(a_{jm})
+\end{align*}\]
+
+<p>여기서 재밌는 부분은, $A$가 $x$를 어떤 값으로 보내는지는 중요해지지 않았습니다. 다만 $Ae_i$를 각각 어느 벡터로 보내는지만 알면, 자동으로 $x$를 어떤 값으로 보내는지 알게 됩니다. 다르게 말한다면, $Ae_i$가 정해짐에 따라 $A$가 유일하게 정의된다는걸 알 수 있습니다! 그렇다면, 이 $A$의 정체는 과연 무엇일까요? $A$를 어떤 함수로써 우리가 생각할 수 있수도 있지 않을까요? 그러면 $\mathbb{R}^m\to \mathbb{R}^n$으로 보내는 다음과 같은 함수 $F$를 생각해봅시다.</p>
+
+\[F(x) = Ax\]
+
+<p>이 함수의 경우에는 다음과 같은 좋은 성질을 만족하는군요. 다음과 같은 성질을 linear한 property라고 부릅시다.</p>
+
+\[F(x +ay) =F(x)+aF(y)\]
+
+<p>또한, 당연하게도 $A$가 행렬이기 때문에, $F(e_i)$들에 따라서 $F$함수가 정의됩니다. 그렇다면, 반대로 처음부터 linear한 property를 가지는 임의의 함수 $T$에 대해서도 생각해볼 수 있습니다. 보통 이러한 $T$를 linear function, 혹은 linear map이라고 부릅니다. 여기서는 굳이 $T$가 어떤 행렬곱으로 나타낼 수 있다고 따로 가정하지 않겠습니다.</p>
+
+\[T(x+ay) = T(x)+aT(y)\]
+
+<p>그러면, 얘도 마찬가지로 $T(e_i)$에 따라서 $T$함수가 정의될 수 있습니다. 어? $T$랑 $F$가 비슷하고, $F$는 $A$의 함수인데? 그러면 모든 linear map은 행렬로써 표현할 수 있는게 아닐까요? 그런데, 특정한 경우에서는 가능합니다! 바로 언제냐면, $T: \mathbb{R}^n\to\mathbb{R}^m$과 같이 유한차원 벡터를 유한차원 벡터로 보내주는 함수일때 가능한거죠. 즉, 행렬은 어떻게 보면 한 벡터를 다른 벡터로 옮겨주는 함수로 작용됩니다. 그렇다면 처음 옮기려고 하는 벡터는 어떤 공간안에 있었고, 옮겨진 벡터는 어느 공간 안에 있을까요? 우리는 이런 벡터들을 모아놓은 공간을 벡터 공간(vector space)이라고 부릅니다.</p>
+
+<h1 id="vector-space">Vector Space</h1>
+
+<p>Vector space를 공부하신 분들은 알겠지만, vector space는 vector를 “깔쌈하게” 모아놓은 집합입니다. 단순히 집합은 아니고, 벡터 안에서 특정 “연산”이 가능해야 합니다. 대충 말하자면 벡터끼리의 곱셈을 제외한 벡터 연산 및 스칼라 연산 그 모든것이 닫혀있으면 vector space라고 부릅니다. 더 정확히 말하자면,</p>
+
+<ol>
+  <li>vector끼리 더하고 빼도 vector</li>
+  <li>vector를 scalar 곱을 취해도 vector</li>
+</ol>
+
+<p>입니다. Vector space에서는 scalar를 <strong>Field 중 하나로 선택</strong>하기 때문에, 스칼라의 역원곱도 vector 안에 들어가있어야 합니다. Field가 뭐냐구요? 말하자면 긴데 간단히 말하면 실수같은거에요. 덧셈, 곱셈에 대해 닫혀있고 서로 분배법칙이 잘 작용하면 field (체)라고 부릅니다.</p>
+
+<p>그렇다면 vector는 무엇일까요? Vector 자체는 사실 정의하기 어렵습니다. 왜나하면 정말 vector는 ‘무언가’거든요. 이 ‘무언가’에 스칼라곱을 적용하고 벡터 연산을 적용한게 vector space이기 때문에, 사실 정의를 하기 애매합니다. 대신 vector의 의미에 대해서는 사람들이 많이 생각하죠. 어, 그런데 여러분들은 $(1, 0, 3,2)$와 같이 실수를 모아놓은 애들을 vector라고 생각하잖아요? 그러면 정의된게 아닐까요? 정확히는 정의된건 아니고, 그냥 벡터 하나를 저렇게 좌표에서 표현한 것 뿐이에요. 정확히 $x=(1, 0, 3,2)$라는건 정말로 $x$가 저런 숫자로 구성되어있다는게 아니라, $x = 1e_1+0e_2+3e_3+4e_4$로 표현될 수 있다는 것을 간략하게 서술하는 것입니다. 이렇게 서술될 수 있는 이유는 바로 vector의 합연산 덕분이죠. 저런식으로 좌표를 잡아서 표현할 수 있는 애들을 vector space의 <code class="language-plaintext highlighter-rouge">Basis</code> 라고 표현을 하고, basis의 원소의 개수를 vector space의 차원이라고 정의를 내립니다.</p>
+
+<p>그렇다면 정말 vector란 무엇일까요? 위에서도 언급했듯이, vector는 정의내릴 수 없지만, 의미는 파악할 수 있습니다. 만약 어떤 집합 안에 있는 원소가 실수곱을 해도 집합 안에 있고, 객체끼리 더해도 집합안에 있다면? 아 이거는 그 집합이 vector space이고 원소가 vector라는 합리적인 의심을 할 수 있습니다. 확률론에서 예시를 한 번 들어보죠.</p>
+
+\[\mathcal{R}=\{X: \mathcal{C}\to \mathbb{R}: \text{random variable}\}\]
+
+<p>이렇게 $\mathcal{R}$집합을 정의를 해봤습니다. 그러면 여기서 random variable $X$를 하나 끄집어 내볼까요? 얘에 대해서 $aX$와 같이 스칼라곱을 취해도 random variable이고, 또다른 random variable인 $Y$를 끄집어내서 $X+Y$와 같이 합해도 random variable이네요. 그렇다면 이녀석은 vector space임이 분명합니다. 실수를 스칼라로 가지는 vector space요! 하지만 안타까운점은 저런 random variable이 무수히 많다는 점이기 때문에, 유한차원 벡터공간은 아니네요.</p>
+
+<h1 id="다시-matrix">다시, matrix</h1>
+
+<p>그래서 왜 갑자기 vector space로 이야기가 넘어왔느냐. 추상 대수학에서는 객체의 성질을 보존하는 매핑에 관심이 많습니다. 보통 준동형사상 (homomorphism)이라고 부르죠. 그렇다면, vector space에 대한 homomorphism이 뭘까요? Vector space의 성질이 뭘까요? 바로, 벡터끼리 더하는 것과 스칼라 연산을 취하는 것입니다. 그렇다면, 이것을 보존하는 mapping은 어떤 성질을 가져야 할까요? 느낌이 오시나요?</p>
+
+\[T(ax+y) = aT(x)+T(y)\]
+
+<p>이면 vector space의 성질을 보존하게 되는겁니다! 아니 근데 이거는 아까전에 봤던 linear mapping이잖아요? 맞아요. 바로 linear mapping이 vector space에 대한 homomorphism으로 작용하게 됩니다. 그런데 아까전에 우리가 linear mapping이면 행렬곱으로 생각할 수 있다고 했잖아요? 어? 그러면 vector space끼리의 보존함수는 행렬곱이네요? 즉, 행렬은 vector space간의 변환에 대해 기술하는 함수였습니다!</p>
+
+<p>그렇다면 이제 실마리가 풀리는군요. 왜 linear algebra에서 행렬을 배우는지, 그리고 뜬금없이 갑자기 vector space를 배우는지, 모든 것이 풀렸어요. Vector space의 보존 함수는 linear mapping이고, 이는 행렬이다! 이 세가지 서로 달라보이는 키워드는 사실 모두 연관이 있었던거죠.</p>
+
+<p>자 그렇다면, 이제 행렬을 어떻게 바라봐야할까요? 사실 그냥 그대로 똑같이 바라봐도 됩니다. 이렇게 vector space가 뭐니 그런게 실제 계산에서 뭐가 중요하겠어요. 그러나, linear algebra에서 배우는 이상한 명제, 정리, 증명등을 이해하기 위해서는 이러한 사실을 아는 것이 중요합니다. 예를 들자면, $A$가 symmetric matrix일때 orthogonal decomposition이 가능하다는 fact는 행렬 자체의 계산을 중점으로 둘 수 있지만, 사실은 선형 함수를 좋게 쪼갤 수 있고 이는 곧 vector space의 변환과 관련있다고도 볼 수 있습니다. 계산 자체로 의미를 두게 되면 할 수 있는 이야기가 별로 없지만, 후자로 생각하게 되면 수학적으로 더 많은 이야기를 할 수 있는 것이죠.</p>
+
+<h1 id="결론">결론</h1>
+
+<p>행렬 계산 자체는 사실 별로 중요하지 않지만, 행렬을 통해서 의미있는 계산을 하는게 중요하다고 생각합니다. 특히, 행렬은 숫자 자체로도 생각할 수 있지만 어떤 함수로서 생각할 수 있고, 이는 고전적인 통계를 공부할 때 큰 도움이 될 수 있습니다.</p>
+
+<p>여담으로, vector space에서는 scalar가 실수 혹은 복소수와 같은 field라고 했잖아요? 그런데 만약 이런 scalar가 field가 아니라 정수 등과 같이 곱셈에 대한 역원이 존재하지 않는 것들로 정의하게 된다면 어떻게 될까요? 이는 바로 module이라고 부릅니다. 또한, 벡터간의 곱셈도 닫혀있다면 어떻게 될까요? 이렇게 되면 그런 집합을 algebra over a field F라고 부릅니다. 만약 이런 것들이 알고 싶다면, 수학과 대학원을 가셔서 commutative algebra같은걸 수강하시면 됩니다 ㅎㅎ</p>]]></content><author><name>Kyungdon Choi</name></author><category term="data-analysis" /><category term="수리과학" /><category term="선형대수" /><summary type="html"><![CDATA[들어가기 앞서…]]></summary></entry><entry><title type="html">Data Science Introduction</title><link href="http://0.0.0.0:4000/data-analysis/data-analysis-intro/" rel="alternate" type="text/html" title="Data Science Introduction" /><published>2022-03-04T00:00:00+00:00</published><updated>2022-03-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/data-analysis/data-analysis-intro</id><content type="html" xml:base="http://0.0.0.0:4000/data-analysis/data-analysis-intro/"><![CDATA[<h1 id="들어가기-앞서">들어가기 앞서…</h1>
 
 <p><strong>데이터 분석은</strong> 크게 세 퍼널로 이루어져있습니다.</p>
 
@@ -8,4 +87,134 @@
 
 <p>하지만, 우리가 어떤 것을 분석하느냐에 따라서 데이터 전처리의 모양새가 달라질 수 있습니다. 또는, 데이터의 세팅이 달라질 수도 있습니다. 또한, 우리가 어떤 모델을 사용해서 분석을 하느냐 역시 중요합니다. 모든 모델이 같은 결과를 출력한다면 굉장히 그 가설이 강력한 경우이지만, 대개는 그렇게 못합니다. 따라서 그냥 무작정 몇가지 평가 지표를 통해서 모델을 선택하는 것이 아니라, 모델이 동작하는 원리를 이해하고 각 평가지표의 제대로 된 의미를 알고 있어야 질 좋은 데이터 분석을 할 수 있습니다.</p>
 
-<p>이 세션에 적힌 글들은 앞으로 데이터 사이언스를 할 때 사람들이 간과하고 넘어갔던 부분들, 해석 방법 등에 대해 이야기합니다. 특히, <del>저의 출신이 수학과인 만큼,</del> 이 섹션의 글들은 대부분 선형 대수의 내용을 포함한 여러 수학적인 내용을 같이 담고 있습니다. 수학과 출신 혹은 그에 관심이 많으신 분들은 흡족하게 잘 이해할 수 있을 것이라고 예상합니다. 그래도 비전공자들을 위해 최대한 쉽게 쓰려고 노력하고 있기 때문에, 이해가 안되는 것들은 <code class="language-plaintext highlighter-rouge">kdchoi.mkt@gmail.com</code>으로 언제든지 메일을 주시면 제가 열심히 답변을 달거나 글을 수정을 하는 등 개선을 하겠습니다!</p>]]></content><author><name>Kyungdon Choi</name></author><category term="data-analysis" /><category term="일반 데이터 분석론" /><summary type="html"><![CDATA[들어가기 앞서…]]></summary></entry></feed>
+<p>이 세션에 적힌 글들은 앞으로 데이터 사이언스를 할 때 사람들이 간과하고 넘어갔던 부분들, 해석 방법 등에 대해 이야기합니다. 특히, <del>저의 출신이 수학과인 만큼,</del> 이 섹션의 글들은 대부분 선형 대수의 내용을 포함한 여러 수학적인 내용을 같이 담고 있습니다. 수학과 출신 혹은 그에 관심이 많으신 분들은 흡족하게 잘 이해할 수 있을 것이라고 예상합니다. 그래도 비전공자들을 위해 최대한 쉽게 쓰려고 노력하고 있기 때문에, 이해가 안되는 것들은 <code class="language-plaintext highlighter-rouge">kdchoi.mkt@gmail.com</code>으로 언제든지 메일을 주시면 제가 열심히 답변을 달거나 글을 수정을 하는 등 개선을 하겠습니다!</p>]]></content><author><name>Kyungdon Choi</name></author><category term="data-analysis" /><category term="일반 데이터 분석론" /><summary type="html"><![CDATA[들어가기 앞서…]]></summary></entry><entry><title type="html">Ridge와 Lasso는 왜 작동하는걸까?</title><link href="http://0.0.0.0:4000/data-analysis/ols-regularization/" rel="alternate" type="text/html" title="Ridge와 Lasso는 왜 작동하는걸까?" /><published>2021-04-15T00:00:00+00:00</published><updated>2021-04-15T00:00:00+00:00</updated><id>http://0.0.0.0:4000/data-analysis/ols-regularization</id><content type="html" xml:base="http://0.0.0.0:4000/data-analysis/ols-regularization/"><![CDATA[<h1 id="들어가기-앞서">들어가기 앞서…</h1>
+
+<p>이번 포스팅을 이해하기 위해서는 <code class="language-plaintext highlighter-rouge">OLS</code>에 대한 기본 개념과 <code class="language-plaintext highlighter-rouge">벡터 미적분학 (Vector Calculus, 혹은 Multivariate Calculus)</code>에 대한 이해가 필요합니다. 특히, <code class="language-plaintext highlighter-rouge">Lagrangian Multiplier</code>에 대한 내용을 알고 계시면 이해가 더 편합니다.</p>
+
+<h1 id="linear-regression과-ols">Linear Regression과 OLS</h1>
+
+<p>지난번 OLS 섹션에서 이야기했던 것 처럼, Linear Regression을 통해서 각 설명변수가 어떻게 종속변수에 관여하는지, 그리고 그 의미가 정확하게 무엇인지에 대해 논의했습니다. 그러나, 몇몇 linear regression을 시행했을 때, 특정 변수에 해당하는 계수의 값이 지나치게 커져버려 오히려 예측력이 줄어들 수 있습니다.</p>
+
+<p>예를 들어서, 우리가 다음과 같은 regression 결과를 얻었다고 해봅시다.</p>
+
+\[Y = 20 + 100X_1 + X_2 + 3X_3\]
+
+<p>이 경우, $X_1$의 값에 따라 $Y$의 값이 크게 바뀌게 되고, 이 경우 outlier의 예측에 대해 더 취약해지는, 불안정한 결과를 초래할 수 있습니다. 그렇기 때문에 통계학자들은 이러한 결과들을 보정하기 위해 계수에 대한 <code class="language-plaintext highlighter-rouge">penalty term</code>을 집어넣기 시작합니다. 이를 Regularization이라고도 부릅니다.</p>
+
+<h1 id="regularization">Regularization</h1>
+
+<p>앞서 말했던 문제들과 같이 특정 parameter에 의해 예측값이 치우쳐지는 경우가 있을 수 있는데, 이를 방지하고자 <code class="language-plaintext highlighter-rouge">penalty term</code>을 추가해서 계수가 크게 늘어나는 것을 방지하는 테크닉을 <code class="language-plaintext highlighter-rouge">Regularization</code>이라고 이야기를 합니다. 이러한 penalty term은 어디에 추가를 해야할까요? Penalty term을 추가하는 이유가 계수 추정에 규제를 두는 것이기 때문에, 계수를 추정하는 식인 <code class="language-plaintext highlighter-rouge">Cost Function</code>에 추가를 합니다. 이를 수식적으로 풀어쓰면 다음과 같이 Cost Function이 재정의 될 수 있습니다.</p>
+
+\[Cost(\beta)=L(\beta)+Reg(\beta)\]
+
+<p>여기서 $L(\beta)$: likelihood estimator, $Reg(\beta)$: penalty term을 의미합니다. 여기에서 $Reg(\beta)$를 어떻게 정의하느냐에 따라 추정 결과가 달라질텐데, 일반적으로는 $L_1$ norm, 혹은 $L_2$ norm을 사용합니다. 이를 각각 <code class="language-plaintext highlighter-rouge">Lasso</code>와 <code class="language-plaintext highlighter-rouge">Ridge</code>라고 부릅니다.</p>
+
+<h2 id="lasso">Lasso</h2>
+
+<p>단순히, Regularization이 L1 norm인 경우를 의미합니다</p>
+
+\[Cost(\beta, \lambda)=\|e\|_2^2+\lambda\|\beta\|_1^1\]
+
+<p>$e = Y - X\beta$ 를 의미하며, $\lambda$ 는 일반적으로 연구자가 지정하는 임의의 숫자입니다.
+또한 \(\|\beta\|_1^1 = \sum_{k=1}^K |\beta_k|\) 를 의미합니다.</p>
+
+<h2 id="ridge">Ridge</h2>
+
+<p>단순히, Regularization이 L2 norm인 경우를 의미합니다.</p>
+
+\[Cost(\beta, \lambda)=\|e\|_2^2+\lambda\|\beta\|_2^2\]
+
+<p>$e = Y - X\beta$ 를 의미하며, $\lambda$는 일반적으로 연구자가 지정하는 임의의 숫자입니다.
+또한 \(\|\beta\|_2^2 = \sum_{k=1}^K \beta_k^2\) 를 의미합니다.</p>
+
+<h1 id="왜-저런-term이-실제로-regularization-역할을-하는가">왜 저런 term이 실제로 regularization 역할을 하는가?</h1>
+
+<p>사실 이번 포스팅의 핵심 논의입니다. <code class="language-plaintext highlighter-rouge">Cost Function</code>에 어떤 <code class="language-plaintext highlighter-rouge">Regularization Term</code>을 추가했을 때 뭔가 베타값이 잘 규제가 될 것 같은 느낌이 듭니다. 그러나 정확한 매커니즘이 무엇일까요? 사실 많은 블로그에서는 Ridge나 Lasso를 설명하는데 있어 뜬금없이 마름모꼴의 도형과 타원 도형들을 좌표평면 위에 그려넣으면서 <strong>Ridge는 올가미다, Lasso는 변수를 선택할 때 쓴다</strong> 이런식으로 이야기를 합니다. 그런데 이에 대한 상세한 이야기는 많이 하지는 않은 것 같습니다. 어떤 수학적 원리가 동작하기에 Ridge와 Lasso가 그런 도형처럼 동작하는걸까요? 사실 이를 이해하기란 쉽지 않습니다. 왜냐하면 Ridge와 Lasso가 제대로 동작하는지 알려면 Lagrange Multiplier라는 Theorem을 알아야하고, 이는 대학 Calculus II에서 보통 배우거든요. 많은 사람들이 Multivariate Calculus를 접하면서 Topology 등에 대한 생소한 개념으로 뚜드려 맞으면서 정작 가장 중요한 개념인 Lagrange Multiplier에 대해서는 간과하고 넘어가는 경우가 많습니다. 그러나, 이는 사실 어려운 개념은 아닙니다. 우선 명제를 써보면 다음과 같습니다.</p>
+
+<h2 id="recall-lagrange-multiplier">Recall: Lagrange Multiplier</h2>
+
+\[\begin{align*}
+&amp;\text{For }f: \mathbb{R}^3\rightarrow\mathbb{R}: \text{differentiable ftn}, \\
+&amp;g: \mathbb{R}^3\rightarrow\mathbb{R},\\
+&amp;\text{the critical point for }f(x) \text{ when }g(x) = c\\
+&amp;\text{ exists on the stationary point of the curve } \\
+&amp;L(\lambda, x)=f(x)-\lambda g(x)
+\end{align*}\]
+
+<p>무수한 영어와 기호들이 악수를 요청하고 있지만, 이는 사실 어렵지 않습니다. 하나하나 보도록 하겠습니다.</p>
+
+<ol>
+  <li>우선 $f$는 3차원 실수공간을 정의역으로 하고 실수를 치역으로 하는 미분 가능한 함수입니다. 공간점 하나를 넣으면 숫자 하나가 튀어나오는거죠</li>
+  <li>$g$ 역시 3차원 실수공간을 정의역으로 하고 실수를 치역으로 하는 함수입니다.</li>
+  <li>이 경우에, 우리가 $g(x, y, z) = c$인 $x, y, z$를 가지고 있다고 해봅시다. $g = c$로 정의역을 constraint 한겁니다.</li>
+  <li>그러면 이 상황에서 $f$의 critical point (극점)은 $L(x, y, z, \lambda) = f(x, y, z) - \lambda g(x, y, z)$로 정의된 $L$ function의 stationary point와 같습니다. (<code class="language-plaintext highlighter-rouge">Lagrange Multiplier</code>)</li>
+</ol>
+
+<p>이를 그림으로 그리면 다음과 같은 상황을 의미합니다.</p>
+
+<p>$f$는 각 점의 원점에서부터의 거리를 의미하며, $g = c$라고 constraint 되어있는 level curve입니다. 그렇다면 여기서 풀어야하는 문제는 이 level curve에서부터까지 거리의 최솟값을 구하는 문제입니다. 이 때 lagrange multiplier를 통해서 최소 거리를 갖는 점과 실제 거리를 계산할 수 있는 것입니다.</p>
+
+<p align="center">
+  <img src="/assets/images/post_regularization_1.png" width="400px" />
+</p>
+<p align="center">
+Fig.1 - Lagrange Multiplier의 예시
+</p>
+
+<p>여기서 $\lambda$는 constraint value $c$의 값에 종속됩니다. 또한 여기서 서술된 Lagrange Multiplier는 3차원 공간에 대해 주로 이야기하는 Calculus II를 기반으로 서술되었으며, 일반적인 실수공간 $\mathbb{R}^n$에서도 적용될 수 있습니다. 이 Theorem을 기반으로 우리는 기존의 Regularization Technique를 revisit 해보겠습니다.</p>
+
+<h2 id="revisit-regulaization">Revisit: Regulaization</h2>
+
+<p>Regularization은 다음과 같은 식을 가지고 있습니다.</p>
+
+\[Cost(\beta, \lambda) = L(\beta) + \lambda Reg(\beta)\]
+
+<p>그런데 이는 Lagrange Multiplier와 비슷한 꼴을 가지고 있습니다. 왜나하면 최종 cost function에 $\beta$와 $\lambda$ 두개가 모두 들어있기 때문입니다. 그래서 이를 Lagrange Multiplier의 세팅과 비슷하게 세팅할 수 있습니다.</p>
+
+<ol>
+  <li>$L(\lambda, x):=Cost(\beta, \lambda)$</li>
+  <li>$f(x):= L(\beta)$</li>
+  <li>$g(x):=Reg(\beta)$</li>
+</ol>
+
+<p>아까 이야기한 것 처럼 $\lambda$는 연구자가 임의로 설정하는 숫자라고 했습니다. 그리고 Lagrange Multiplier에서 $\lambda$는 $g(x)$의 constraint $c$와도 대응합니다. 이는 비약이긴 하다만, 간단하게 생각해보면 $\lambda$를 설정하는 것 자체가 $\beta$ 공간에 대한 constraint $c$를 설정하는 것과 동일하다고 볼 수 있을 것입니다. 이 세팅에서는 $f(x) = L(\beta)$의 최솟값이 굳이 원점에 있을 필요는 없고, 어떤 좌표평면의 특정 점을 중심점으로 $f(x)$의 그래프가 그려질 것입니다. 그리고 각 $\beta_i$의 축 별로 scaling이 다르기 때문에, 타원형으로 level surface가 그려질 것입니다. 개념을 간략하게 이야기하기 위해, $\beta$ coefficient가 2개밖에 없는 상황으로 이야기해보겠습니다. 2D에서는 3D를 볼 수 없기 때문에, level curve를 계속 그려나가면서 좌표평면에 그래프를 그려보도록 하겠습니다.</p>
+
+<p>이 intuition 및 간략한 세팅 등을 통해서 regularization에 대한 자세한 이야기를 해보도록 하겠습니다.</p>
+
+<h2 id="revisit-lasso">Revisit: Lasso</h2>
+
+<p>앞서 말씀드렸듯이, Lasso는 $L_1$ norm을 regularized term으로 가지고 있는 녀석입니다. 따라서 이 때 $g(x) = Reg(\beta_1, \beta_2) = c$는 마름모꼴의 형태를 하고 있습니다.</p>
+
+<p align="center">
+  <img src="/assets/images/post_regularization_2.png" width="400px" />
+</p>
+<p align="center">
+Fig.2 - Lasso
+</p>
+<p>이 마름모꼴을 접선으로 $L(\beta_1, \beta_2)$이 스쳐지나간다면, 그 접점이 Regularization을 만족한 점이 될 것입니다.</p>
+
+<h2 id="revisit-ridge">Revisit: Ridge</h2>
+
+<p>앞서 말씀드렸듯이, Ridge는 $L_2$ norm을 regularized term으로 가지고 있는 녀석입니다. 따라서 이 때 $g(x) = Reg(\beta_1, \beta_2) = c$는 원형의 형태를 하고 있습니다.</p>
+
+<p align="center">
+  <img src="/assets/images/post_regularization_3.png" width="400px" />
+</p>
+<p align="center">
+Fig.3 - Ridge
+</p>
+<p>이 원의 접선과 $L(\beta_1, \beta_2)$의 접선이 같아진다면, 그 접점이 Regularization을 만족한 점이 될 것입니다.</p>
+
+<h1 id="결론">결론</h1>
+
+<p>이번 포스팅에서는 regularization의 기하학적인 의미를 같이 탐구해봤습니다. 사실 Cost Function의 수치해석적으로도 생각할 수 있습니다. Regularization Term을 집어넣음으로서 기존 cost ftn $L(x)$의 값을 줄임과 동시에 $\beta$값도 동시에 줄어들게 해야하기 때문에 어떠한 새로운 균형점 $\tilde{\beta}$를 찾을 수 있다는 식으로 해석해도 무방하거든요.</p>
+
+<p>사실 이번 포스팅을 했던 가장 큰 이유는, 제가 혼자 Ridge와 Lasso에 대해 공부를 해야할 일이 있었습니다. 그러나 블로그 포스팅을 보면 밑도 끝도 없이 타원형 / 마름모형 그래프를 그려놓고 이게 ridge다, 이게 lasso다하는 등의 겉핥기식 내용이 많았습니다. 또한, lasso는 무조건 마름모 끝점에서 만날 수 밖에 없기 때문에 변수 선택법으로도 탁월하다는 식으로 이야기를 한 것들을 여러개 봤습니다. 사실 이해가 안갔습니다. <strong>왜 굳이 끝점에서 만나야하지? 그리고 실제로 제가 그렸던 Fig.3을 보면 당연하게도 그렇지 않은 경우가 많을텐데, 왜 저렇게 말을 할까?</strong> 하는 의문점이 많았습니다.</p>
+
+<p>그래서 제가 했던 것은 논문을 찾아보는 것이었죠. 어렵게 lasso라는 개념을 처음 정립한 논문인 95년도 Tibshirani 논문을 읽으면서, 모든 것이 해소되었습니다. <strong>항상 끝점에서 만나는게 아니라, 끝점에서 만날 확률이 비교적 ridge 등 다른 방법론보다 높아서 변수 선택법으로 사용할 여지가 있다!</strong>라고 언급을 한거죠.</p>
+
+<p>생각해보면 블로그 글들을 보고 편하게 공부하려고 했던 저의 잘못이라고도 생각을 합니다. 영어보다는 한국어가 더 편하니까요. 그러나 블로그 글이 생각보다 엄밀하지 않은 것들이 많았고, 그리고 잘못된 해석이나 잘못된 내용이 포함되어있을 수 있다는 의식을 가지게 되었습니다. 그리고 이게 제가 블로그를 시작하게 된 가장 큰 원동력 중 하나이기도 하죠! 물론, 제 블로그 역시 저 개인이 쓰는 것이기 때문에 언제든 잘못된 내용을 제가 포함할 수 있습니다. 그렇기에 만약 잘못된 내용이 있다면 언제든 이메일로 이야기해주세요!</p>
+
+<h1 id="관련-페이퍼">관련 페이퍼</h1>
+
+<p><em>Regression Shrinkage and Selection via the Lasso (Tibshirani, 1995)</em></p>]]></content><author><name>Kyungdon Choi</name></author><category term="data-analysis" /><category term="일반 데이터 분석론" /><category term="수리과학" /><summary type="html"><![CDATA[들어가기 앞서…]]></summary></entry></feed>

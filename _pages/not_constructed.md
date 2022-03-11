@@ -14,7 +14,9 @@ author_profile: true
 가세요
 ```
 
+<p align = 'center'>
 <img src="/assets/images/쿼카.webp" width="400px">
+</p>
 
 항상 관심 가져주셔서 감사합니다!
 
