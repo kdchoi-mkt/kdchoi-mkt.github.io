@@ -14,14 +14,11 @@ data:
       - title: "2. 행렬은 선형대수일까"
         url: /data-analysis/linear-algebra
       - title: "3. PCA는 왜 분산이 큰 방향으로 축을 잡을까"
-        # url: /data-analysis/pca
-        url: /not-constructed
+        url: /data-analysis/pca
       - title: "4. OLS의 수학적 의미"
-        # url: /data-analysis/ols
-        url: /not-constructed
+        url: /data-analysis/ols
       - title: "5. Interaction"
-        # url: /data-analysis/interaction
-        url: /not-constructed
+        url: /data-analysis/interaction
       - title: "6. Dependence와 Correlation의 차이"
         # url: /data-analysis/dependence-and-correlation
         url: /not-constructed
