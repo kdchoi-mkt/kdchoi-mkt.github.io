@@ -3,8 +3,9 @@ title: "Ridge와 Lasso는 왜 작동하는걸까?"
 categories:
   - data-analysis
 tags:
-  - 일반 데이터 분석론
   - 수리과학
+  - 통계
+  - 머신러닝
 toc: true
 sidebar:
   nav: data

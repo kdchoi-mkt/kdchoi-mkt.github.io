@@ -4,6 +4,7 @@ categories:
   - data-analysis
 tags:
   - 일반 데이터 분석론
+  - 머신러닝
 toc: true
 sidebar:
   nav: data

@@ -1,7 +1,7 @@
 ---
 title: 계량경제학
 layout: category
-permalink: /categories/basic-econometric/
+permalink: /categories/econometric/
 taxonomy: econometric
 sidebar:
   nav: data

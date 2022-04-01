@@ -3,7 +3,6 @@ title: "Dependence와 Correlation"
 categories:
   - data-analysis
 tags:
-  - 일반 데이터 분석론
   - 수리과학
   - 통계
 toc: true
@@ -113,11 +112,11 @@ $$
   1. $\langle x, y\rangle =\langle y, x\rangle$
   2. $\langle x, ay + bz\rangle=a\langle x, y\rangle+ b\langle x, z\rangle$ for $a, b\in F$: scalar
   3. $\langle x, x\rangle \geq 0$ and $=0$ only if $x=0$
-  실제로, $\operatorname{Cov}(X, Y)$는 위의 세가지 조건을 모두 만족합니다. 따라서 $\operatorname{Cov}(\cdot, \cdot )$은 랜덤변수 공간의 inner product로서 정의가 가능하고, cauchy-schwatz thm에 의해서 자연스레
-  $$
-  \operatorname{Cov}(X, Y)^2\leq Var(X)Var(Y)
-  $$
-  를 만족하는걸 보였습니다. 따라서 $\operatorname{Corr}(X, Y) \in [-1, 1]$에 있음을 보였습니다.
+     실제로, $\operatorname{Cov}(X, Y)$는 위의 세가지 조건을 모두 만족합니다. 따라서 $\operatorname{Cov}(\cdot, \cdot )$은 랜덤변수 공간의 inner product로서 정의가 가능하고, cauchy-schwatz thm에 의해서 자연스레
+     $$
+     \operatorname{Cov}(X, Y)^2\leq Var(X)Var(Y)
+     $$
+     를 만족하는걸 보였습니다. 따라서 $\operatorname{Corr}(X, Y) \in [-1, 1]$에 있음을 보였습니다.
 
 그러면 다시 본론으로 넘어와서, 어떤 것들이 연관이 없다고 할까요? 바로, $X$가 움직이든 말든 $Y$는 평균적으로 변하지 않는다는 것을 의미하겠죠? 다른 말로 하자면
 

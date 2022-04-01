@@ -42,24 +42,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 
 
-<url>
-<loc>http://0.0.0.0:4000/data-analysis/ols-regularization/</loc>
-<lastmod>2021-04-15T00:00:00+00:00</lastmod>
-
-
-<changefreq>monthly</changefreq>
-
-
-
-<priority>0.5</priority>
-
-</url>
-
-
-
-
-
-
 
 
 
@@ -73,7 +55,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/404.html</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -99,8 +81,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 
 <url>
-<loc>http://0.0.0.0:4000/categories/basic-econometric/</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<loc>http://0.0.0.0:4000/categories/econometric/</loc>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -127,7 +109,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/biography</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -154,7 +136,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/categories/</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -181,7 +163,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/categories/data-analysis/</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -208,7 +190,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -235,7 +217,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/assets/js/lunr/lunr-en.js</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -262,7 +244,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/assets/js/lunr/lunr-gr.js</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -289,7 +271,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/assets/js/lunr/lunr-store.js</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -316,7 +298,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/assets/css/main.css</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -343,7 +325,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/not-constructed</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -370,7 +352,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/sitemap.xml</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -397,7 +379,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/tags/</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -424,7 +406,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/feed.xml</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>
@@ -451,7 +433,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://0.0.0.0:4000/assets/css/main.css.map</loc>
-<lastmod>2022-03-11T08:40:29+00:00</lastmod>
+<lastmod>2022-03-11T09:07:10+00:00</lastmod>
 
 
 <changefreq>monthly</changefreq>

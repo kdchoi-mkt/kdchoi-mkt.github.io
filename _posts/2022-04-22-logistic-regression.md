@@ -3,9 +3,9 @@ title: "분류 예측 이해하기 - Logistic Regression"
 categories:
   - data-analysis
 tags:
-  - 일반 데이터 분석론
   - 계량경제학
   - 통계
+  - 머신러닝
 toc: true
 sidebar:
   nav: data
