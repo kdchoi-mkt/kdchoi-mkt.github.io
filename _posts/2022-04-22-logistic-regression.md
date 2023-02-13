@@ -43,10 +43,10 @@ $$
 \sigma(x):= \frac{e^x}{1 + e^x}
 $$
 
-이녀석은 연속이고 미분가능하며, 단조증가함수에, 지수함수의 꼴로 이루어져있고, 또한 우리가 원하는 limit의 형태를 그대로 가지고 있습니다. 그렇다면 linear regression 형태에 이녀석을 composite하면 확률의 의미를 가지는 outcome이 나올 것이고, 이를 통해 우리가 원하는 $\beta$값을 추정할 수 있을 것입니다. 물론 이 $\beta$는 우리가 원하는 어떠한 cost function의 $\argmin$ 값일 것이죠. 즉,
+이녀석은 연속이고 미분가능하며, 단조증가함수에, 지수함수의 꼴로 이루어져있고, 또한 우리가 원하는 limit의 형태를 그대로 가지고 있습니다. 그렇다면 linear regression 형태에 이녀석을 composite하면 확률의 의미를 가지는 outcome이 나올 것이고, 이를 통해 우리가 원하는 $\beta$값을 추정할 수 있을 것입니다. 물론 이 $\beta$는 우리가 원하는 어떠한 cost function의 $\operatorname{argmin}$ 값일 것이죠. 즉,
 
 $$
-\beta = \argmin_\beta \operatorname{Cost}(\sigma(\alpha + \beta_1x_{1i} + \cdots + \beta_kx_{ki}), Y_i)
+\beta = \operatorname{argmin}_\beta \operatorname{Cost}(\sigma(\alpha + \beta_1x_{1i} + \cdots + \beta_kx_{ki}), Y_i)
 $$
 
 을 의미합니다. 특히 여기서 $\operatorname{Cost}$ 함수가 Bernoulli 분포의 MLE와 같다면, 우리는 이 회귀분석을 통해 $\beta$를 추정하는 방법론을 `logistic regression`이라고 부릅니다.

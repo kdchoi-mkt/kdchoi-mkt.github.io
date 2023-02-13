@@ -4,7 +4,7 @@ layout: category
 permalink: /categories/econometric/
 taxonomy: econometric
 sidebar:
-  nav: data
+  nav: econ
 ---
 
 `계량경제학 (Econometric)`과 관련하여 쓴 포스팅을 모았습니다. 이 섹션에서 주로 이야기할 것은 `내생 변수를 없애는 법`과 `선택 모델을 잘 만드는 법`입니다.

@@ -4,7 +4,8 @@ main:
     url: /biography
   - title: "데이터 분석"
     url: /categories/data-analysis/
-
+  - title: "계량경제학"
+    url: /categories/econometric/
 data:
   - title: "General Data Analysis"
     url: /categories/data-analysis/
