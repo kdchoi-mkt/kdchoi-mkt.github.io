@@ -95,11 +95,11 @@ $$
 P(\alpha + \beta X_i + \epsilon_i > \epsilon_j) = \cdots = \frac{e^{\alpha + \beta X_i}}{1 + e^{\alpha + \beta X_i}}
 $$
 
-이것은 우리가 기존에 알고 있던 logistic regression과 똑같은 형태로 나오는 것을 확인할 수 있습니다. 위의 섹션에서는 그냥 임의로 $g(x)$를 정의했지만, 알고보니 유틸리티에 포함되는 random noise의 distribution의 분포와 연관되어서 나오는 것을 확인할 수 있습니다. Econometrician, 혹은 statistician들은 이러한 에러텀의 분포를 가지고 있는 녀석들을 `Gumbel Distribution`, 혹은 `Extreme Value Type 1`이라고 부릅니다.
+이것은 우리가 기존에 알고 있던 logistic regression과 똑같은 형태로 나오는 것을 확인할 수 있습니다. 위의 섹션에서는 그냥 임의로 $g(x)$를 정의했지만, 알고보니 유틸리티에 포함되는 random noise의 distribution의 분포와 연관되어서 나오는 것을 확인할 수 있습니다. Econometrician, 혹은 statistician들은 이러한 에러텀의 분포를 가지고 있는 녀석들을 `Gumbel Distribution`, 혹은 `Type 1 Extreme Value`이라고 부릅니다.
 
 # Extend Assumption - Probit
 
-이제 논의를 조금 더 확장해봅시다. 저희는 logistic regression이 단순히 좋은 $g$함수를 찾아서 쓴게 아니라 통계학적 (혹은 계량경제학적)으로 **unobservable term의 distribution과 연관지어서 설명이 될 수 있다**는 것을 확인했습니다. 특히, unobservable term이 EV Type 1을 따를 때 우리가 알고 있는 logistic regression을 따른다는 것을 알게 되었습니다. 그런데, 이 error term의 distribution이 굳이 EV Type 1을 따를 필요가 없지 않을까요? 만약 정규분포를 따른다면? 아니면 이상한 다른 분포를 따른다면? 이 경우에는 어떻게 회귀식이 바뀌게 될까요?
+이제 논의를 조금 더 확장해봅시다. 저희는 logistic regression이 단순히 좋은 $g$함수를 찾아서 쓴게 아니라 통계학적 (혹은 계량경제학적)으로 **unobservable term의 distribution과 연관지어서 설명이 될 수 있다**는 것을 확인했습니다. 특히, unobservable term이 Type 1 EV을 따를 때 우리가 알고 있는 logistic regression을 따른다는 것을 알게 되었습니다. 그런데, 이 error term의 distribution이 굳이 Type 1 EV을 따를 필요가 없지 않을까요? 만약 정규분포를 따른다면? 아니면 이상한 다른 분포를 따른다면? 이 경우에는 어떻게 회귀식이 바뀌게 될까요?
 
 우선, $\epsilon_i$와 $\epsilon_j$가 똑같은 분포 $G(x)$를 따른다고 가정을 합시다. 이 때 당연하게도, $\epsilon_i - \epsilon_j$역서 어떤 분포 $H(x)$를 따르겠죠. 그렇다면, 우리의 유틸리티에 따른 선택확률은 다음과 같이 기술됩니다.
 
@@ -111,7 +111,7 @@ $$
 
 예를 들어서, $\epsilon_i$와 $\epsilon_j$가 `정규분포`를 따른다고 가정해봅시다. $\epsilon_i - \epsilon_j$도 정규 분포를 따르는 것이 알려져있기 때문에, $H(-\alpha - \beta X_i) = \Phi(-\alpha - \beta X_i)$입니다. 여기서 $\Phi$는 정규분포의 CDF인데, 알다시피 $\Phi$의 closed form은 존재하지 않는다는 것이 알려져있습니다. 따라서 이렇게 정규분포를 따른다고 가정하면 계산 코스트가 심하게 많이 걸려 $\beta$값을 추정하는데 오래 걸릴 수 있습니다. 그러나 이렇게 하는게 조금 더 믿음직한 가설이기 때문에 $\beta$의 설명에 있어서는 조금 더 파워풀 할 수 있습니다. 이렇게 **error term을 normal distribution으로 가정**하고 choice 확률을 회귀분석하는 방법론을 `Probit`이라 부릅니다.
 
-당연히 정규분포 외에도 우리가 임의로 넣고 싶은 분포를 넣을 수 있습니다. 그러나 noise에 분포를 넣으면 noise의 차이가 어떤 분포를 따르는지 따로 계산을 해줘야하고, 여기서 더더욱 계산 코스트가 나갈 수 있습니다. 그러나 Logistic Regression의 경우 확률 값이 exponential 형태의 closed form으로 되어있기에 계산이 훨씬 간단하다는 이점이 있습니다. 따라서 계량 분석에서 logistic regression, 혹은 `Logit`을 많이 쓰는 이유가 그것입니다. 물론 Logit Regression과 같이 error term에 대한 가정을 EV Type 1로 둬버리면 utility framework으로 접근했을 때 말도 안되는 결론이 튀어나올 수 있습니다. 이를 해결하기 위해 Nested Logit이나 Random Coefficient Logit등의 여러가지 보완 방법론을 사용하게 되는데, 이에 대해서는 다음에 기회가 된다면 설명하도록 하겠습니다.
+당연히 정규분포 외에도 우리가 임의로 넣고 싶은 분포를 넣을 수 있습니다. 그러나 noise에 분포를 넣으면 noise의 차이가 어떤 분포를 따르는지 따로 계산을 해줘야하고, 여기서 더더욱 계산 코스트가 나갈 수 있습니다. 그러나 Logistic Regression의 경우 확률 값이 exponential 형태의 closed form으로 되어있기에 계산이 훨씬 간단하다는 이점이 있습니다. 따라서 계량 분석에서 logistic regression, 혹은 `Logit`을 많이 쓰는 이유가 그것입니다. 물론 Logit Regression과 같이 error term에 대한 가정을 Type 1 EV로 둬버리면 utility framework으로 접근했을 때 말도 안되는 결론이 튀어나올 수 있습니다. 이를 해결하기 위해 Nested Logit이나 Random Coefficient Logit등의 여러가지 보완 방법론을 사용하게 되는데, 이에 대해서는 다음에 기회가 된다면 설명하도록 하겠습니다.
 
 # 결론
 
