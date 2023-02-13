@@ -124,7 +124,8 @@ $$
 <p align = "center">
 Fig.2 - Lasso
 </p>
-이 마름모꼴을 접선으로 $L(\beta_1, \beta_2)$이 스쳐지나간다면, 그 접점이 Regularization을 만족한 점이 될 것입니다.
+
+이 마름모꼴을 접선으로 $L(\beta_1, \beta_2)$ 이 스쳐지나간다면, 그 접점이 Regularization을 만족한 점이 될 것입니다.
 
 ## Revisit: Ridge
 
