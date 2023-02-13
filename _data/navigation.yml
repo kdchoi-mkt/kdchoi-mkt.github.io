@@ -20,24 +20,19 @@ data:
       - title: "5. Interaction"
         url: /data-analysis/interaction
       - title: "6. Dependence와 Correlation의 차이"
-        # url: /data-analysis/dependence-and-correlation
-        url: /not-constructed
+        url: /data-analysis/dependence-and-correlation
       - title: "7. Lasso와 Ridge의 의미"
-        # url: /data-analysis/ols-regularization
-        url: /not-constructed
+        url: /data-analysis/ols-regularization
       - title: "8. Logistic Regression과 Utility"
-        # url: /data-analysis/logistic-regression
-        url: /not-constructed
+        url: /data-analysis/logistic-regression
       - title: "9. 분류 모델의 평가 지표 이해하기"
-        # url: /data-analysis/classification-metric
-        url: /not-constructed
+        url: /data-analysis/classification-metric
 econ:
   - title: "Econometric"
     url: /categories/econometric
     children:
       - title: "1. Instrumental Variable"
-        # url: /econometric/instrument-var
-        url: /not-constructed
+        url: /econometric/instrument-var
       - title: "2. LATE Theorem"
         url: /not-constructed
       - title: "3. Mixed Logit and Hierarchical Bayesian"
